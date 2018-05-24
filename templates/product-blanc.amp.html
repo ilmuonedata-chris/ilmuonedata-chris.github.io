@@ -22,6 +22,7 @@ limitations under the License.
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
   <script async="" src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 
 
 
@@ -267,5 +268,32 @@ limitations under the License.
     <span class="xs-hide sm-hide">Switch to Noir<span>
   </span></span></a>
 
+  <amp-analytics type="googleanalytics">
+  <script type="application/json">
+  {
+    "vars": {
+      "account": "UA-119550101-2"
+    },
+    "triggers": {
+      "trackPageview": {
+        "on": "visible",
+        "request": "pageview"
+      },
+      "scrollPings": {
+        "on": "scroll",
+        "scrollSpec": {
+          "verticalBoundaries": [25,75]
+        },
+        "request": "event",
+        "vars": {
+          "eventId": "scroll",
+          "eventCategory": "amp - pdp view",
+          "eventAction": "lune blanc"
+        }
+      }
+    }
+  }
+  </script>
+  </amp-analytics>
   </body>
 </html>
